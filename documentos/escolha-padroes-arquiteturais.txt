@@ -9,3 +9,14 @@ no modelo ou nas classes controladores não afetaria a maneira que o usuário ut
 Padrão Arquitetural Orientado a Mensagens -> Pensando em um sistema de ponto de vendas de um mercado, onde há a possibilidade de existir mais de um caixa,
 e com isso mais de um terminal. Esses terminais deveriam se comunicar com uma central, como um ERP, que armazenaria os dados contábeis, de entrada e saída e afins.
 Portanto, essa comunicação deveria ser feita de forma assíncrona, onde o cliente coloca uma mensagem na fila de mensagem e pode continuar com o seu processamento. 
+
+
+Márcio Bedran Menezes da Costa:
+
+Arquitetura MVC -> Padrão amplamente difundido que facilita encontrar colaboradores familiarizados em trabalhar com o padrãoalém disso as divisões de responsabilidades facilitam a divisões de tarefas entre especialitas em front-end e back-end.
+
+Arquitetura Orientada a Mensagens -> Com essa arquitetura conseguiriamos facilitar a consolidação de todos os dados pois cada caixa se comunicaria com um sistema de controle principal com isso teriamos todas as transações sendo tratadas por um sistema unico e não cada caixa fazendo seu proprio fechamento.
+
+Arquitetura Cliente/Servidor -> Em conunto com a arquitetura de mensagens ajudaria no controle centralizando o processamento das transações num servidor central enquanto cada caixa funcinaria como um cliente desse servidor.
+
+
