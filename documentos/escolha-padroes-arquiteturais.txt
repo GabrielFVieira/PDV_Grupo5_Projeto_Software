@@ -1,0 +1,11 @@
+
+Rodrigo dos Santos Carvalho:
+
+Padrão Arquitetural MVC -> O padrão arquitetural MVC favoreceria o desenvolvimento da aplicação primeiramente por ser um padrão amplamente utilizado em desenvolvimento 
+de softwares, o que demonstra que há uma gama de documentações, tutorais e suporte para auxiliar. Ao separar a interface gráfica do modelo, 
+nos beneficiaremos da especialização do trabalho de desenvolvimento, com desenvolvedores especializados em front-end e back-end. Realizar alterações
+no modelo ou nas classes controladores não afetaria a maneira que o usuário utiliza a aplicação.
+
+Padrão Arquitetural Orientado a Mensagens -> Pensando em um sistema de ponto de vendas de um mercado, onde há a possibilidade de existir mais de um caixa,
+e com isso mais de um terminal. Esses terminais deveriam se comunicar com uma central, como um ERP, que armazenaria os dados contábeis, de entrada e saída e afins.
+Portanto, essa comunicação deveria ser feita de forma assíncrona, onde o cliente coloca uma mensagem na fila de mensagem e pode continuar com o seu processamento. 
