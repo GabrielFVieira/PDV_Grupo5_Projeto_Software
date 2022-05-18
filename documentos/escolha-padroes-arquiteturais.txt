@@ -44,3 +44,9 @@ Thiago Rodrigues da Motta Fagundes:
 
 Padrão MVC-> por ser um dos mais difundidos e por facilitar a organização do código, eficiência no desenvolvimento
 Microsserviços-> com a divisão em módulos facilica o desenvolvimento por pessoas/times separados e também é melhor para prevenir falhas totais
+
+Victor Verdan Braga:
+
+Padrão MVC -> Um padrão bem popular com vários projetos abertos para tirar de referência que é bem dividido para facilitar no desenvolvimento, manutenção e divisão de tarefas. O grupo poderá ser dividido em dois times onde um lidará com o Front (Visão e Controladores) enquanto a outra irá trabalhar no Back (Modelo) e essa divisão poderá agilizar no desenvolvimento.
+
+Padrão Cliente/Servidor -> Dada a complexidade e o tipo de aplicação, o padrão pode ser facilmente aplicado sem muitos problemas, ainda teria uma divisão de dois grupos onde um trabalha no Cliente e o outro no Servidor. 
