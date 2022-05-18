@@ -38,3 +38,9 @@ O uso de Microserviços nos permite também utilizar mais de uma linguagem de pr
 
 Padrão Arquitetural Cliente/Servidor -> Acho que esse vem "de graça" conforme os outros padrões que citei, o cliente seria basicamente o front no browser do cliente e o servidor consistiria de 
 3 módulos (autenticação/criação de usuários, registro de produtos/vendas, auditoria/relatórios)
+
+
+Thiago Rodrigues da Motta Fagundes:
+
+Padrão MVC-> por ser um dos mais difundidos e por facilitar a organização do código, eficiência no desenvolvimento
+Microsserviços-> com a divisão em módulos facilica o desenvolvimento por pessoas/times separados e também é melhor para prevenir falhas totais
