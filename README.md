@@ -16,3 +16,5 @@ Grupo 5 - Componentes:
 - Thiago R. da Motta
 - Victor Verdan
 - Winne Domingues
+
+Os principios SOLID estão dentro de uma pasta em documentos.
