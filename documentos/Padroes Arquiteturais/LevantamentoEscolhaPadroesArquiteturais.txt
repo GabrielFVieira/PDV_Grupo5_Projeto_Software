@@ -1,0 +1,62 @@
+
+Rodrigo dos Santos Carvalho:
+
+Padrão Arquitetural MVC -> O padrão arquitetural MVC favoreceria o desenvolvimento da aplicação primeiramente por ser um padrão amplamente utilizado em desenvolvimento 
+de softwares, o que demonstra que há uma gama de documentações, tutorais e suporte para auxiliar. Ao separar a interface gráfica do modelo, 
+nos beneficiaremos da especialização do trabalho de desenvolvimento, com desenvolvedores especializados em front-end e back-end. Realizar alterações
+no modelo ou nas classes controladores não afetaria a maneira que o usuário utiliza a aplicação.
+
+Padrão Arquitetural Orientado a Mensagens -> Pensando em um sistema de ponto de vendas de um mercado, onde há a possibilidade de existir mais de um caixa,
+e com isso mais de um terminal. Esses terminais deveriam se comunicar com uma central, como um ERP, que armazenaria os dados contábeis, de entrada e saída e afins.
+Portanto, essa comunicação deveria ser feita de forma assíncrona, onde o cliente coloca uma mensagem na fila de mensagem e pode continuar com o seu processamento. 
+
+
+Márcio Bedran Menezes da Costa:
+
+Arquitetura MVC -> Padrão amplamente difundido que facilita encontrar colaboradores familiarizados em trabalhar com o padrãoalém disso as divisões de 
+responsabilidades facilitam a divisões de tarefas entre especialitas em front-end e back-end.
+
+Arquitetura Orientada a Mensagens -> Com essa arquitetura conseguiriamos facilitar a consolidação de todos os dados pois cada caixa se comunicaria com 
+um sistema de controle principal com isso teriamos todas as transações sendo tratadas por um sistema unico e não cada caixa fazendo seu proprio fechamento.
+
+Arquitetura Cliente/Servidor -> Em conunto com a arquitetura de mensagens ajudaria no controle centralizando o processamento das transações num servidor 
+central enquanto cada caixa funcinaria como um cliente desse servidor.
+
+
+Gabriel Figueiredo Vieira:
+
+Padrão Arquitetural MVC -> Como dito pelos outros, esse é um padrão amplamente difundido no mercado, creio que todos do grupo já tenham tido alguma experiência 
+com ele, além disso a divisão de responsabilidades torna mais fácil a manutenção e o desenvolvimento do sistema, facilitará também quando formos fazer a divisão 
+de tarefas.
+
+Padrão Arquitetural Orientado a Mensagens -> Poderíamos fazer uso dessa arquitetura para a publicação de eventos de auditoria (registro de venda), que por sinal, 
+poderiam ser gerenciados por um microserviço responsável por pegar esses dados e salvar em um outro banco de dados por exemplo, ou num ES. Como estamos trabalhando 
+também com um caixa presencial, não precisamos nos preocupar com controle de estoque para validar se o produto existe ainda em estoque, então feita a venda, pode 
+ser enviada a mensagem pro backend e ele processará ela quando pudar, de acordo com a ordem das mensagens enviadas pelos demais caixas. Seria enviado para o backend 
+um post com os dados da venda, ele pegaria esses dados, faria as devidas transformações e só gravaria a mensagem na fila do microserviço responsável por essa 
+auditoria, já respondendo pro front sucesso/erro e liberando assim o cliente
+
+Padrão Arquitetural em Microserviços -> Poderíamos nos beneficiar da divisão do sistema em modulos, dessa forma seria possível dividir as responsabilidades em por 
+exemplo: 1 módulo para o frontend, 1 módulo para o backend principal (cadastro de produtos e venda), 1 módulo para autenticação (e criação de usuários). Manteríamos 
+o front se comunicando somente com o backend, porém esse delegaria para o microserviço de autenticação as validações para cadastro de usuário e autenticação. 
+Em caso de autenticação bem sucedida o mesmo receberia um objeto contendo alguns dados do usuário logado (como nome e cargo) e um token de autenticação, esses dados 
+seriam devolvidos para o front, que os guardaria no localStorage O uso de Microserviços nos permite também utilizar mais de uma linguagem de programação, podendo usar 
+algo como Java no backend e React no front.
+
+Padrão Arquitetural Cliente/Servidor -> Acho que esse vem "de graça" conforme os outros padrões que citei, o cliente seria basicamente o front no browser do cliente 
+e o servidor consistiria de 3 módulos (autenticação/criação de usuários, registro de produtos/vendas, auditoria/relatórios)
+
+
+Thiago Rodrigues da Motta Fagundes:
+
+Padrão MVC-> por ser um dos mais difundidos e por facilitar a organização do código, eficiência no desenvolvimento
+Microsserviços-> com a divisão em módulos facilica o desenvolvimento por pessoas/times separados e também é melhor para prevenir falhas totais
+
+Victor Verdan Braga:
+
+Padrão MVC -> Um padrão bem popular com vários projetos abertos para tirar de referência que é bem dividido para facilitar no desenvolvimento, manutenção e divisão 
+de tarefas. O grupo poderá ser dividido em dois times onde um lidará com o Front (Visão e Controladores) enquanto a outra irá trabalhar no Back (Modelo) e essa 
+divisão poderá agilizar no desenvolvimento.
+
+Padrão Cliente/Servidor -> Dada a complexidade e o tipo de aplicação, o padrão pode ser facilmente aplicado sem muitos problemas, ainda teria uma divisão de dois 
+grupos onde um trabalha no Cliente e o outro no Servidor. 
