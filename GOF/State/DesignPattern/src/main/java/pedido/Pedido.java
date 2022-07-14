@@ -1,7 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+//Victor Verdan Braga - 216083145
+
 package pedido;
 
 import java.util.ArrayList;
@@ -18,12 +16,20 @@ public class Pedido {
     private ArrayList<ItemPedido> itens = new ArrayList<>();
     private ICupomStrategy cupomStrategy;
 
+    public Pedido() {
+        this.status = new AguardandoPagamento(this);
+    }
+
+    public Pedido(int id, int codigo, int dataInicio) {
+        super();
+        this.id = id;
+        this.codigo = codigo;
+        this.dataInicio = dataInicio;
+        this.status = new AguardandoPagamento(this);
+    }
+
     public int getDataInicio() {
         return dataInicio;
-    }
-    
-    public Pedido(){
-        this.status = new AguardandoPagamento(this);
     }
 
     public void setDataInicio(int dataInicio) {
@@ -73,12 +79,6 @@ public class Pedido {
 
     public double getTotalComDesconto() {
         return this.cupomStrategy.getDesconto(this);
-    }
-
-    public Pedido(int id, int dataInicio) {
-        super();
-        this.id = id;
-        this.dataInicio = dataInicio;
     }
 
     public ArrayList<ItemPedido> getItens() {

@@ -1,9 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+//Victor Verdan Braga - 216083145
+
 package state;
 
+import java.util.ArrayList;
+import pedido.ItemPedido;
 import pedido.Pedido;
 
 /**
@@ -22,28 +22,47 @@ public class AguardandoPagamento extends StatusPedido {
     }
 
     @Override
-    public void setId() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setId(int id) {
+        System.out.println("Não é possível fazer essa operação");
     }
 
     @Override
-    public void setCodigo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setCodigo(int codigo) {
+        System.out.println("Não é possível fazer essa operação");
     }
 
     @Override
-    public void setDataInicio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setDataInicio(int data) {
+        System.out.println("Não é possível fazer essa operação");
     }
 
     @Override
-    public void setDataFim() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setDataFim(int data) {
+        System.out.println("Não é possível fazer essa operação");
     }
 
     @Override
-    public void setItens() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setItens(ArrayList<ItemPedido> itens) {
+        super.pedido.setItens(itens);
+        //this.itens = itens;
+    }
+
+    @Override
+    public String avancar() {
+        pedido.changeStatus(new AguardandoPreparo(pedido));
+        return "Esperando Preparar";
+    }
+
+    @Override
+    public String voltar() {
+        System.out.println("Não é possível fazer essa operação");
+        return "Não pode voltar retornar além disso.";
+    }
+
+    @Override
+    public String cancelar() {
+        pedido.changeStatus(new Cancelado(pedido));
+        return "Pedido cancelado";
     }
     
 }

@@ -1,9 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+//Victor Verdan Braga - 216083145
+
 package state;
 
+import java.util.ArrayList;
+import pedido.ItemPedido;
 import pedido.Pedido;
 
 /**
@@ -22,28 +22,46 @@ public class Cancelado extends StatusPedido {
     }
 
     @Override
-    public void setId() {
-        System.err.println("Nao é possível alterar o ID num pedido Cancelado");
+    public void setId(int id) {
+        System.out.println("Não é possível fazer essa operação");
     }
 
     @Override
-    public void setCodigo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setCodigo(int codigo) {
+        System.out.println("Não é possível fazer essa operação");
     }
 
     @Override
-    public void setDataInicio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setDataInicio(int data) {
+        System.out.println("Não é possível fazer essa operação");
     }
 
     @Override
-    public void setDataFim() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setDataFim(int data) {
+        System.out.println("Não é possível fazer essa operação");
     }
 
     @Override
-    public void setItens() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setItens(ArrayList<ItemPedido> itens) {
+        System.out.println("Não é possível fazer essa operação");
+    }
+    
+    @Override
+    public String avancar() {
+        System.out.println("Não é possível fazer essa operação");
+        return "Pedido Cancelado";
+    }
+
+    @Override
+    public String voltar() {
+        System.out.println("Não é possível fazer essa operação");
+        return "Pedido cancelado";
+    }
+
+    @Override
+    public String cancelar() {
+        System.out.println("Não é possível fazer essa operação");
+        return "Pedido cancelado";
     }
     
 }
