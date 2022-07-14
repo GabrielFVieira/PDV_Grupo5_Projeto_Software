@@ -17,4 +17,4 @@ Grupo 5 - Componentes:
 - Victor Verdan
 - Winne Domingues
 
-Os principios SOLID estão dentro de uma pasta em documentos.
+Obs.: O arquivo `pdv.asta` na pasta `Diagramas` contém os diagramas de caso de uso, vcp, sequência e classe. Nas subpastas se encontram as imagens exportadas de cada diagrama.
